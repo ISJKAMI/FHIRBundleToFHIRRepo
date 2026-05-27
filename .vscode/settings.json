@@ -1,0 +1,7 @@
+{
+  "objectscript.conn.active": false,
+  "objectscript.conn.host": "localhost",
+  "objectscript.conn.port": 52773,
+  "objectscript.conn.ns": "FHIRDEMO",
+  "objectscript.conn.username": "_SYSTEM"
+}

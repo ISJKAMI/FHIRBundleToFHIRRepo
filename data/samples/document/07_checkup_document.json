@@ -1,0 +1,3714 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+    "lastUpdated": "2025-11-08T11:30:00+09:00",
+    "profile": [
+      "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eCheckupGeneral|1.7.0"
+    ]
+  },
+  "identifier": {
+    "system": "http://jpfhir.jp/fhir/clins/bundle-identifier",
+    "value": "SAMPLE-FHIR-BUNDLE-07"
+  },
+  "type": "document",
+  "timestamp": "2025-11-08T11:30:00+09:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:fd13ba04-3b58-ac07-fad6-464cec87691d",
+      "resource": {
+        "resourceType": "Composition",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Composition_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+            "valueString": "1.0"
+          }
+        ],
+        "identifier": {
+          "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+          "value": "1314567890^2025^4hC1Pz8Vt0Kq7Nw3Jr9Gm2Xf6Sg5YbADeL"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+              "code": "53576-5",
+              "display": "検診・健診報告書"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.392.200119.6.1001",
+                "code": "10",
+                "display": "特定健診情報"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad",
+          "type": "Encounter"
+        },
+        "date": "2025-11-08",
+        "author": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          },
+          {
+            "reference": "urn:uuid:ad92c1c7-d54b-4a6e-a4f1-d1f796f019b0",
+            "type": "Organization"
+          }
+        ],
+        "title": "健康診断結果のお知らせ",
+        "event": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "urn:oid:1.2.392.200119.6.1002",
+                    "code": "010",
+                    "display": "特定健康診査"
+                  }
+                ]
+              }
+            ],
+            "period": {
+              "start": "2025-11-01"
+            },
+            "detail": [
+              {
+                "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad",
+                "type": "Encounter"
+              }
+            ]
+          }
+        ],
+        "section": [
+          {
+            "title": "特定健診検査結果セクション",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "code": "01011",
+                  "display": "特定健診検査結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><ul><li>既往歴：1:特記すべきことあり</li> <li>具体的な既往歴：高血圧・脂質異常症</li> <li>自覚症状：2:特記すべきことなし</li> <li>他覚症状：2:特記すべきことなし</li> <li>身長：170.0cm</li> <li>体重：78.0kg</li> <li>腹囲(実測)：96.0cm</li> <li>BMI：27.0kg/m2</li> <li>収縮期血圧(1回目)：148mmHg</li> <li>拡張期血圧(1回目)：92mmHg</li> <li>採血時間(食後)：2:食後10時間以上</li> <li>空腹時中性脂肪(トリグリセリド)：190mg/dl</li> <li>HDLコレステロール：38mg/dl</li> <li>LDLコレステロール：158mg/dl</li> <li>AST(GOT)：28U/l</li> <li>ALT(GPT)：32U/l</li> <li>γ-GT(γ-GTP)：75U/l</li> <li>空腹時血糖：118mg/dl</li> <li>尿糖：1:－</li> <li>尿蛋白：1:－</li> <li>赤血球数：480万/mm3</li> <li>血色素量(ヘモグロビン値)：15.2g/dl</li> <li>ヘマトクリット値：45.0%</li> <li>貧血検査(実施理由)：喫煙歴長期により造血系への影響確認のため</li> <li>血清クレアチニン：0.95mg/dl</li> <li>血清クレアチニン(対象者)：1:検査結果による血清クレアチニン検査対象者</li> <li>血清クレアチニン(実施理由)：高血圧あり</li> <li>eGFR：68.0ml/min/1.73m2</li> <li>心電図(所見の有無)：1:所見あり</li> <li>心電図(所見)：左室肥大(LVH)</li> <li>心電図(対象者)：1:検査結果による心電図検査対象者</li> <li>心電図(実施理由)：高血圧あり</li> <li>眼底検査(キースワグナー分類)：3:Ⅱa</li> <li>眼底検査(シェイエ分類:H)：3:2</li> <li>眼底検査(シェイエ分類:S)：2:1</li> <li>眼底検査(SCOTT分類)：3:Ⅱ</li> <li>眼底検査(Wong-Mitchell分類)：2:軽度</li> <li>眼底検査(改変Davis分類)：2:単純網膜症</li> <li>眼底検査(その他の所見)：動脈狭細化</li> <li>眼底検査(対象者)：1:検査結果による眼底検査対象者</li> <li>眼底検査(実施理由)：高血圧あり</li> <li>メタボリックシンドローム判定：1:基準該当</li> <li>保健指導レベル：1:積極的支援</li> <li>医師の診断(判定)：高血圧・脂質異常・メタボ傾向</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:7f4a1c2e-0c5c-4b8d-9aa0-2c4a0b36d901",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:9e6cdf34-1b43-4e8a-8fb0-0c5a66d6c4d8",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:52b9c6c9-5e74-4c65-b46a-a80c9fe79b74",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:eb9ff8d4-2fa3-4b46-a5bf-0a6226bcbba2",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:6ce89e5f-7f8d-4b90-9b5a-6f703d8768d4",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:6f1c8b34-0a77-4c0c-a9e3-51df0c82d3fb",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:1a9dbf62-3d8c-4eb1-aa02-902f0a436001",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:bc73b1af-38fd-42db-9fb5-e6d7c0ce7da9",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:0d3f52e1-bb0c-4c58-94b4-0b5ff0ae4fb4",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:f4c9140a-5fb1-4db4-9fb2-6d3d79ac8b99",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:5cafba57-5ab7-4dd5-908d-dcc3a0d4b079",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:b0e60235-9cb3-4e5e-9121-1e8d83628561",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:ae293660-283c-4a3b-ae6e-1c9b24db2f0e",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:927a923b-4cb5-44ed-8a2c-53e6cc6bf1b3",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:82b4c634-5c50-4f27-bc85-2f2c8297e3f0",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:4e0910bc-b7cd-48e3-8139-b9a803e10c4a",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:6fbe6c1a-f85c-4bd3-b1b9-6b5bdb478d64",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:7cb24f61-ce63-4450-9ab4-3e2ed7d7116d",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:cbc4c5a9-df91-4a29-8fc3-03db97571578",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:20c93198-2a09-4ef8-8a30-42fe4c937c98",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:4f1dd074-aa2d-4d08-bc6a-d37fb31bfc79",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:86810321-3e4b-4e6a-8b86-2aa3aaefd8ef",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:4ac4ce0d-d24e-4f7b-86fd-7e406612f08e",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:a0fd3077-1dd3-4b07-91dd-e7ba2b28195f",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:cc8a98f6-5d19-442a-8e90-0e0d86d4e66e",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:74e64fe7-f09f-4e81-bfc2-9c7e8f7d31ec",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:50e0283c-f7b6-4853-952d-ea71fcf5434f",
+                "type": "Coverage"
+              },
+              {
+                "reference": "urn:uuid:71ec3af4-7f15-4e2e-bdb2-51a39b6a9c65",
+                "type": "Coverage"
+              }
+            ]
+          },
+          {
+            "title": "特定健診問診結果セクション",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "code": "01012",
+                  "display": "特定健診問診結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><ul><li>服薬1(血圧)：はいー薬剤名：アムロジピンー服薬理由：高血圧症のため</li><li>服薬2(血糖)：いいえ</li><li>服薬3(脂質)：はいー薬剤名：ロスバスタチンー服薬理由：高脂血症のため</li><li>既往歴1(脳血管)：2:いいえ</li> <li>既往歴2(心血管)：2:いいえ</li> <li>既往歴3(腎不全･人工透析)：2:いいえ</li><li>貧血：1:はい</li> <li>喫煙：1:はい</li> <li>20歳からの体重変化：1:はい</li> <li>30分以上の運動習慣：2:いいえ</li> <li>歩行又は身体活動：2:いいえ</li> <li>歩行速度：2:いいえ</li> <li>咀嚼：1:何でも</li> <li>食べ方1(早食い等)：1:速い</li> <li>食べ方2(就寝前)：1:はい</li> <li>食べ方3(間食)：1:毎日</li> <li>食習慣：2:いいえ</li> <li>飲酒：2:週5～6日</li> <li>飲酒量：4:3～5合未満</li> <li>睡眠：1:はい</li> <li>生活習慣の改善：2:意志あり(6か月以内)</li> <li>特定保健指導の受診歴：2:いいえ</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:0b454d8e-03c8-45e5-b0a6-c0ebcb3f2b4f",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:32f1a64c-2461-408e-9f7c-9b2750d9b720",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:acb19b46-ea27-4d96-baf2-f6d444109d95",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:4f0a91c3-b6ad-4a62-9e3e-0c938ce0c4f4",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:9c2e4b8d-1ab1-4e0e-8f6c-7d3c1449f2bd",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:7a83d4e2-9f54-45e2-9f2a-1fb71dc6c8b7",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:3e0b49c2-4c0f-4a3f-bf6d-0f1e4d58c6a3",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:b448b33e-ab0f-4737-b57c-d8b0da246fed",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:9bd3b28f-65e4-4b21-8821-6c5a71fcbb32",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:a84cd1b6-cc70-4c9f-b12c-d5bd0e5a1f5f",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:54caa942-e582-4c30-8a57-8d42dba0e9ff",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:730ef51a-137c-4b78-b84e-0be225ee7853",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:f7c94dd9-a3a3-4bb1-bbe1-1f1b28e2d77d",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:225905e6-5dc8-4db5-a6a3-fcd88af7880a",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:98e5f03c-70cb-4fb9-a82b-07c01a050cf1",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:bd34e8a4-18db-4088-b214-ddaa8e631965",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:e1c410a2-14da-4b78-94da-99af5b5e544a",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:d439f40c-72d7-4326-9b1e-746f0ff1c6c3",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:48accc30-389d-49c4-8410-bb8ee1cf6e3f",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:7b9fb40d-2f2b-4be7-9d63-a2177a2bd3c7",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:52a1b6a7-afbc-4a77-ae1e-cee3c91bc899",
+                "type": "Observation"
+              },
+              {
+                "reference": "urn:uuid:b0e0fb75-1100-0000-9341-22e2571aa42f",
+                "type": "Observation"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Patient_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID",
+            "value": "SAMPLE-PATIENT-0001"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "サンプル 太郎",
+            "family": "サンプル",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "サンプル タロウ",
+            "family": "サンプル",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1975-04-12",
+        "address": [
+          {
+            "text": "東京都サンプル区サンプル1-2-3",
+            "postalCode": "100-0000",
+            "country": "JP"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-0100-0000"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ad92c1c7-d54b-4a6e-a4f1-d1f796f019b0",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+            "value": "1310000001"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/report-organization-code",
+                "code": "doc-org",
+                "display": "報告作成機関"
+              }
+            ]
+          }
+        ],
+        "name": "サンプル健診センター",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "tel:0300000000"
+          }
+        ],
+        "address": [
+          {
+            "text": "東京都サンプル区健診9-9-9",
+            "postalCode": "100-0000"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Organization_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+            "value": "1310000003"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/report-organization-code",
+                "code": "exec-org",
+                "display": "実施機関"
+              }
+            ]
+          }
+        ],
+        "name": "サンプル健診センター",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "tel:0300000000"
+          }
+        ],
+        "address": [
+          {
+            "text": "東京都サンプル区健診3-4-5",
+            "postalCode": "100-0000"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6fa94bc3-9ce8-4e1c-b27b-8197b217f51d",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_OrganizationInsurer_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber",
+            "value": "00000000"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "ins"
+              }
+            ]
+          }
+        ],
+        "name": "サンプル健康保険組合"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Practitioner_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "name": [
+          {
+            "text": "サンプル 花子"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Encounter_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category",
+          "code": "checkup",
+          "display": "健診"
+        },
+        "period": {
+          "start": "2025-11-01",
+          "end": "2025-11-01"
+        },
+        "serviceProvider": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407",
+          "type": "Organization"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:71ec3af4-7f15-4e2e-bdb2-51a39b6a9c65",
+      "resource": {
+        "resourceType": "Coverage",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageInsurance_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID",
+            "value": "SAMPLE-PATIENT-0001"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuranceMajorCategory",
+              "code": "2",
+              "display": "国保"
+            }
+          ]
+        },
+        "beneficiary": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuredPersonCategory",
+              "code": "1",
+              "display": "被保険者"
+            }
+          ]
+        },
+        "payor": [
+          {
+            "reference": "urn:uuid:6fa94bc3-9ce8-4e1c-b27b-8197b217f51d",
+            "type": "Organization"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:50e0283c-f7b6-4853-952d-ea71fcf5434f",
+      "resource": {
+        "resourceType": "Coverage",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_CoverageService_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID",
+            "value": "SAMPLE-PATIENT-0001"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.208",
+              "code": "1",
+              "display": "受診券"
+            }
+          ]
+        },
+        "subscriberId": "25148392017",
+        "beneficiary": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "payor": [
+          {
+            "reference": "urn:uuid:6fa94bc3-9ce8-4e1c-b27b-8197b217f51d",
+            "type": "Organization"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7f4a1c2e-0c5c-4b8d-9aa0-2c4a0b36d901",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N056000000000011",
+              "display": "既往歴"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2001",
+              "code": "1",
+              "display": "特記すべきことあり"
+            }
+          ]
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.392.200119.6.1005",
+                  "code": "9N056160400000049",
+                  "display": "具体的な既往歴"
+                }
+              ]
+            },
+            "valueString": "高血圧・脂質異常症"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9e6cdf34-1b43-4e8a-8fb0-0c5a66d6c4d8",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N061000000000011",
+              "display": "自覚症状"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2001",
+              "code": "2",
+              "display": "特記すべきことなし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:52b9c6c9-5e74-4c65-b46a-a80c9fe79b74",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N066000000000011",
+              "display": "他覚症状"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2001",
+              "code": "2",
+              "display": "特記すべきことなし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eb9ff8d4-2fa3-4b46-a5bf-0a6226bcbba2",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N001000000000001",
+              "display": "身長"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 170.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6ce89e5f-7f8d-4b90-9b5a-6f703d8768d4",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N006000000000001",
+              "display": "体重"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 78.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6f1c8b34-0a77-4c0c-a9e3-51df0c82d3fb",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N016160100000001",
+              "display": "腹囲(実測)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 96.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1a9dbf62-3d8c-4eb1-aa02-902f0a436001",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N011000000000001",
+              "display": "BMI"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 27.0,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bc73b1af-38fd-42db-9fb5-e6d7c0ce7da9",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9A751000000000001",
+              "display": "収縮期血圧(1回目)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 148,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0d3f52e1-bb0c-4c58-94b4-0b5ff0ae4fb4",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9A761000000000001",
+              "display": "拡張期血圧(1回目)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 92,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f4c9140a-5fb1-4db4-9fb2-6d3d79ac8b99",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N141000000000011",
+              "display": "採血時間(食後)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2202",
+              "code": "2",
+              "display": "食後10時間以上"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5cafba57-5ab7-4dd5-908d-dcc3a0d4b079",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "3F015000002327101",
+              "display": "空腹時中性脂肪(トリグリセリド)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 190,
+          "unit": "mg/dl",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b0e60235-9cb3-4e5e-9121-1e8d83628561",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "3F070000002327101",
+              "display": "HDLコレステロール"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 38,
+          "unit": "mg/dl",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ae293660-283c-4a3b-ae6e-1c9b24db2f0e",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "3F077000002327101",
+              "display": "LDLコレステロール"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 158,
+          "unit": "mg/dl",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:927a923b-4cb5-44ed-8a2c-53e6cc6bf1b3",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "3B035000002327201",
+              "display": "AST(GOT)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 28,
+          "unit": "U/l",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:82b4c634-5c50-4f27-bc85-2f2c8297e3f0",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "3B045000002327201",
+              "display": "ALT(GPT)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 32,
+          "unit": "U/l",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4e0910bc-b7cd-48e3-8139-b9a803e10c4a",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "3B090000002327101",
+              "display": "γ-GT(γ-GTP)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 75,
+          "unit": "U/l",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6fbe6c1a-f85c-4bd3-b1b9-6b5bdb478d64",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "3D010000001926101",
+              "display": "空腹時血糖"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 118,
+          "unit": "mg/dl",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7cb24f61-ce63-4450-9ab4-3e2ed7d7116d",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "1A020000000191111",
+              "display": "尿糖"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ],
+              "system": "urn:oid:1.2.392.200119.6.2102",
+              "code": "1",
+              "display": "－"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cbc4c5a9-df91-4a29-8fc3-03db97571578",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "1A010000000191111",
+              "display": "尿蛋白"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ],
+              "system": "urn:oid:1.2.392.200119.6.2102",
+              "code": "1",
+              "display": "－"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:20c93198-2a09-4ef8-8a30-42fe4c937c98",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_ObservationGroup_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes",
+              "code": "2A020",
+              "display": "貧血検査"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "hasMember": [
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:91af0d52-0e9f-4c83-a0e0-d0dc8b0a7ca2",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:0ab65fae-4699-466c-9ef0-49fe7cd17637",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:a9123305-f357-47e8-8db0-c65d017d5cf8",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "RSON"
+              }
+            ],
+            "reference": "urn:uuid:efdc4af0-6c21-4c90-8100-00002b124f64",
+            "type": "Observation"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:91af0d52-0e9f-4c83-a0e0-d0dc8b0a7ca2",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "2A020000001930101",
+              "display": "赤血球数"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 480,
+          "unit": "万/mm3",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*4/mm3"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0ab65fae-4699-466c-9ef0-49fe7cd17637",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "2A030000001930101",
+              "display": "血色素量(ヘモグロビン値)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 15.2,
+          "unit": "g/dl",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a9123305-f357-47e8-8db0-c65d017d5cf8",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "2A040000001930102",
+              "display": "ヘマトクリット値"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 45.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:efdc4af0-6c21-4c90-8100-00002b124f64",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "2A020161001930149",
+              "display": "貧血検査(実施理由)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueString": "喫煙歴長期により造血系への影響確認のため。"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4f1dd074-aa2d-4d08-bc6a-d37fb31bfc79",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_ObservationGroup_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes",
+              "code": "3C015",
+              "display": "血清クレアチニン検査"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "hasMember": [
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:743c8fcb-3c6f-4abf-a2af-c674adbe2a5d",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "RSON"
+              }
+            ],
+            "reference": "urn:uuid:cd45bb1a-9b91-4cdf-af0b-40e7f6fc7d3e",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "RSON"
+              }
+            ],
+            "reference": "urn:uuid:119b07f1-6c19-4d55-9ba3-0657a9f6bb2b",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:ffc25e90-3d7b-49d9-9f09-58b28c0d8a9c",
+            "type": "Observation"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:743c8fcb-3c6f-4abf-a2af-c674adbe2a5d",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "3C015000002327101",
+              "display": "血清クレアチニン"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 0.95,
+          "unit": "mg/dl",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cd45bb1a-9b91-4cdf-af0b-40e7f6fc7d3e",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "3C015161602399911",
+              "display": "血清クレアチニン(対象者)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.18110",
+              "code": "1",
+              "display": "検査結果による血清クレアチニン検査対象者"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:119b07f1-6c19-4d55-9ba3-0657a9f6bb2b",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "3C015161002399949",
+              "display": "血清クレアチニン(実施理由)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueString": "高血圧あり"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ffc25e90-3d7b-49d9-9f09-58b28c0d8a9c",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "8A065000002391901",
+              "display": "eGFR"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 68.0,
+          "unit": "ml/min/1.73m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "ml/min/1.73m2"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:86810321-3e4b-4e6a-8b86-2aa3aaefd8ef",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_ObservationGroup_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes",
+              "code": "9A110",
+              "display": "心電図検査"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "hasMember": [
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:ee2d08de-3b75-42ba-b2d4-1c29a9afb9de",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:9051f9e8-b4ba-48a8-9a2c-f63d6d07b529",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "RSON"
+              }
+            ],
+            "reference": "urn:uuid:ef2f8a7d-eec0-4e31-8a8d-e5f0d7e6ca51",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "RSON"
+              }
+            ],
+            "reference": "urn:uuid:eb723fa0-95ab-44fc-884e-50711333b845",
+            "type": "Observation"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ee2d08de-3b75-42ba-b2d4-1c29a9afb9de",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9A110160700000011",
+              "display": "心電図(所見の有無)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2002",
+              "code": "1",
+              "display": "所見あり"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9051f9e8-b4ba-48a8-9a2c-f63d6d07b529",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9A110160800000049",
+              "display": "心電図(所見)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueString": "左室肥大（ＬＶＨ）"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ef2f8a7d-eec0-4e31-8a8d-e5f0d7e6ca51",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9A110161600000011",
+              "display": "心電図(対象者)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.18120",
+              "code": "1",
+              "display": "検査結果による心電図検査対象者"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eb723fa0-95ab-44fc-884e-50711333b845",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9A110161000000049",
+              "display": "心電図(実施理由)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueString": "高血圧あり"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4ac4ce0d-d24e-4f7b-86fd-7e406612f08e",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_ObservationGroup_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes",
+              "code": "9E100",
+              "display": "眼底検査"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "hasMember": [
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:05852af8-62e1-4e76-9349-84ae86b8ac83",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:798a8e55-e473-4ef2-a58d-5ec46c4a0f52",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:0ae5e1b3-a45c-4f7b-b1f5-9bafc61f522c",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:d49fe0eb-63fd-435f-a253-2a5acda1b8a4",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:51e9859f-c7c8-42b7-b51f-d7edbcf8c319",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:da82b17c-d100-0000-a8eb-d5e7a8dcf523",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "COMP"
+              }
+            ],
+            "reference": "urn:uuid:bde3ab96-8b63-4eb7-8124-8e371746e3b4",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "RSON"
+              }
+            ],
+            "reference": "urn:uuid:5d1d09bb-ae3f-4267-8d77-a04fbf553f4a",
+            "type": "Observation"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/Common/Extension/StructureDefinition/observatioGroupRelationship",
+                "valueCode": "RSON"
+              }
+            ],
+            "reference": "urn:uuid:4a5a6dcb-9087-4bf6-9683-b0f113c4abcd",
+            "type": "Observation"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:05852af8-62e1-4e76-9349-84ae86b8ac83",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9E100166000000011",
+              "display": "眼底検査(キースワグナー分類)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ],
+              "system": "urn:oid:1.2.392.200119.6.2110",
+              "code": "3",
+              "display": "Ⅱa"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:798a8e55-e473-4ef2-a58d-5ec46c4a0f52",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9E100166100000011",
+              "display": "眼底検査(シェイエ分類:H)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ],
+              "system": "urn:oid:1.2.392.200119.6.2111",
+              "code": "3",
+              "display": "2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0ae5e1b3-a45c-4f7b-b1f5-9bafc61f522c",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9E100166200000011",
+              "display": "眼底検査(シェイエ分類:S)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ],
+              "system": "urn:oid:1.2.392.200119.6.2112",
+              "code": "2",
+              "display": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d49fe0eb-63fd-435f-a253-2a5acda1b8a4",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9E100166300000011",
+              "display": "眼底検査(SCOTT分類)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ],
+              "system": "urn:oid:1.2.392.200119.6.2113",
+              "code": "3",
+              "display": "Ⅱ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:51e9859f-c7c8-42b7-b51f-d7edbcf8c319",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9E100166600000011",
+              "display": "眼底検査(Wong-Mitchell分類)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ],
+              "system": "urn:oid:1.2.392.200119.6.18080",
+              "code": "2",
+              "display": "軽度"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:da82b17c-d100-0000-a8eb-d5e7a8dcf523",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9E100166500000011",
+              "display": "眼底検査(改変Davis分類)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ],
+              "system": "urn:oid:1.2.392.200119.6.18090",
+              "code": "2",
+              "display": "単純網膜症"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bde3ab96-8b63-4eb7-8124-8e371746e3b4",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9E100160900000049",
+              "display": "眼底検査(その他の所見)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueString": "動脈狭細化"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5d1d09bb-ae3f-4267-8d77-a04fbf553f4a",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9E100161600000011",
+              "display": "眼底検査(対象者)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.18130",
+              "code": "1",
+              "display": "検査結果による眼底検査対象者"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4a5a6dcb-9087-4bf6-9683-b0f113c4abcd",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9E100161000000049",
+              "display": "眼底検査(実施理由)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueString": "高血圧あり"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a0fd3077-1dd3-4b07-91dd-e7ba2b28195f",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N501000000000011",
+              "display": "メタボリックシンドローム判定"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1008",
+              "code": "1",
+              "display": "基準該当"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cc8a98f6-5d19-442a-8e90-0e0d86d4e66e",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N506000000000011",
+              "display": "保健指導レベル"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.3001",
+              "code": "1",
+              "display": "積極的支援"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:74e64fe7-f09f-4e81-bfc2-9c7e8f7d31ec",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N511000000000049",
+              "display": "医師の診断(判定)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueString": "高血圧・脂質異常・メタボ傾向。"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0b454d8e-03c8-45e5-b0a6-c0ebcb3f2b4f",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N701000000000011",
+              "display": "服薬1(血圧)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "1",
+              "display": "はい"
+            }
+          ]
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.392.200119.6.1005",
+                  "code": "9N701167000000049",
+                  "display": "服薬1(血圧)(薬剤名)"
+                }
+              ]
+            },
+            "valueString": "アムロジピン"
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.392.200119.6.1005",
+                  "code": "9N701167100000049",
+                  "display": "服薬1(血圧)(服薬理由)"
+                }
+              ]
+            },
+            "valueString": "高血圧症のため"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:32f1a64c-2461-408e-9f7c-9b2750d9b720",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N706000000000011",
+              "display": "服薬2(血糖)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "2",
+              "display": "いいえ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:acb19b46-ea27-4d96-baf2-f6d444109d95",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N711000000000011",
+              "display": "服薬3(脂質)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "1",
+              "display": "はい"
+            }
+          ]
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.392.200119.6.1005",
+                  "code": "9N711167000000049",
+                  "display": "服薬3(脂質)(薬剤名)"
+                }
+              ]
+            },
+            "valueString": "ロスバスタチン"
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.392.200119.6.1005",
+                  "code": "9N711167100000049",
+                  "display": "服薬3(脂質)(服薬理由)"
+                }
+              ]
+            },
+            "valueString": "高脂血症のため"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4f0a91c3-b6ad-4a62-9e3e-0c938ce0c4f4",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N716000000000011",
+              "display": "既往歴1(脳血管)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "2",
+              "display": "いいえ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9c2e4b8d-1ab1-4e0e-8f6c-7d3c1449f2bd",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N721000000000011",
+              "display": "既往歴2(心血管)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "2",
+              "display": "いいえ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7a83d4e2-9f54-45e2-9f2a-1fb71dc6c8b7",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N726000000000011",
+              "display": "既往歴3(腎不全･人工透析)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "2",
+              "display": "いいえ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3e0b49c2-4c0f-4a3f-bf6d-0f1e4d58c6a3",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N731000000000011",
+              "display": "貧血"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "1",
+              "display": "はい"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b448b33e-ab0f-4737-b57c-d8b0da246fed",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N736000000000011",
+              "display": "喫煙"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.24060",
+              "code": "1",
+              "display": "はい"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9bd3b28f-65e4-4b21-8821-6c5a71fcbb32",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N741000000000011",
+              "display": "20歳からの体重変化"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "1",
+              "display": "はい"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a84cd1b6-cc70-4c9f-b12c-d5bd0e5a1f5f",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N746000000000011",
+              "display": "30分以上の運動習慣"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "2",
+              "display": "いいえ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:54caa942-e582-4c30-8a57-8d42dba0e9ff",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N751000000000011",
+              "display": "歩行又は身体活動"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "2",
+              "display": "いいえ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:730ef51a-137c-4b78-b84e-0be225ee7853",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N756000000000011",
+              "display": "歩行速度"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "2",
+              "display": "いいえ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f7c94dd9-a3a3-4bb1-bbe1-1f1b28e2d77d",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N872000000000011",
+              "display": "咀嚼"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.18030",
+              "code": "1",
+              "display": "何でも"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:225905e6-5dc8-4db5-a6a3-fcd88af7880a",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N766000000000011",
+              "display": "食べ方1(早食い等)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2004",
+              "code": "1",
+              "display": "速い"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:98e5f03c-70cb-4fb9-a82b-07c01a050cf1",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N771000000000011",
+              "display": "食べ方2(就寝前)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "1",
+              "display": "はい"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bd34e8a4-18db-4088-b214-ddaa8e631965",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N782000000000011",
+              "display": "食べ方3(間食)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.18040",
+              "code": "1",
+              "display": "毎日"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e1c410a2-14da-4b78-94da-99af5b5e544a",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N781000000000011",
+              "display": "食習慣"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "2",
+              "display": "いいえ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d439f40c-72d7-4326-9b1e-746f0ff1c6c3",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N786000000000011",
+              "display": "飲酒"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.24040",
+              "code": "2",
+              "display": "週5～6日"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:48accc30-389d-49c4-8410-bb8ee1cf6e3f",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N791000000000011",
+              "display": "飲酒量"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4c9b6f68-9c2d-4db3-ae4b-1c8c91d3e4a2",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ],
+              "system": "urn:oid:1.2.392.200119.6.24050",
+              "code": "4",
+              "display": "3～5合未満"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7b9fb40d-2f2b-4be7-9d63-a2177a2bd3c7",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N796000000000011",
+              "display": "睡眠"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "1",
+              "display": "はい"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:52a1b6a7-afbc-4a77-ae1e-cee3c91bc899",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N801000000000011",
+              "display": "生活習慣の改善"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2007",
+              "code": "2",
+              "display": "意志あり(6か月以内)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b0e0fb75-1100-0000-9341-22e2571aa42f",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-08T11:30:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCheckup/StructureDefinition/JP_Observation_eCheckupGeneral|1.7.0"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.1005",
+              "code": "9N808000000000011",
+              "display": "特定保健指導の受診歴"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1d74c5cd-6a32-4ca4-8b19-0d09eb1e3b70",
+          "type": "Patient"
+        },
+        "effectiveDateTime": "2025-11-01",
+        "performer": [
+          {
+            "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+            "type": "Practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.6.2003",
+              "code": "2",
+              "display": "いいえ"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "id": "sample-07-07-checkup-document"
+}

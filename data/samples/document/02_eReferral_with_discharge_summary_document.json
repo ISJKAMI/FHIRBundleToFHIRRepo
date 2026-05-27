@@ -1,0 +1,1268 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+    "lastUpdated": "2025-07-28T17:00:00+09:00",
+    "profile": [
+      "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eReferral|1.12.0"
+    ]
+  },
+  "identifier": {
+    "system": "http://jpfhir.jp/fhir/clins/bundle-identifier",
+    "value": "SAMPLE-FHIR-BUNDLE-02"
+  },
+  "type": "document",
+  "timestamp": "2025-08-03T11:00:00+09:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:830ec2d1-67a7-427e-b6fe-ad0eb29da7fb",
+      "resource": {
+        "resourceType": "Composition",
+        "meta": {
+          "lastUpdated": "2025-07-28T17:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|1.12.0"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+            "valueString": "1.0"
+          }
+        ],
+        "identifier": {
+          "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+          "value": "1318814790^2025^0123-Discharge-573091824650372918455"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+              "code": "57133-1",
+              "display": "診療情報提供書"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-subtypecodes",
+                "code": "DISCHARGE",
+                "display": "退院時文書"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd",
+          "type": "Patient",
+          "display": "患者情報"
+        },
+        "date": "2025-08-03T11:00:00+09:00",
+        "author": [
+          {
+            "reference": "urn:uuid:3e6a0ba2-d781-4fd7-9de6-e077b690daed",
+            "type": "Practitioner",
+            "display": "文書作成責任者"
+          },
+          {
+            "reference": "urn:uuid:8a888100-0000-4fb7-b5c4-b34afcdea638",
+            "type": "Organization",
+            "display": "文書作成機関"
+          }
+        ],
+        "title": "診療情報提供書",
+        "custodian": {
+          "reference": "urn:uuid:8a888100-0000-4fb7-b5c4-b34afcdea638",
+          "type": "Organization",
+          "display": "文書管理責任機関"
+        },
+        "event": [
+          {
+            "code": [
+              {
+                "text": "診療情報提供書発行"
+              }
+            ],
+            "period": {
+              "start": "2025-08-03"
+            }
+          }
+        ],
+        "section": [
+          {
+            "title": "紹介元情報",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "920",
+                  "display": "紹介元情報セクション"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:8a888100-0000-4fb7-b5c4-b34afcdea638",
+                "type": "Organization"
+              },
+              {
+                "reference": "urn:uuid:3e6a0ba2-d781-4fd7-9de6-e077b690daed",
+                "type": "Practitioner"
+              }
+            ]
+          },
+          {
+            "title": "紹介先情報",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "910",
+                  "display": "紹介先情報セクション"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:a44951be-cdaa-4c53-9e35-6be013da5441",
+                "type": "Organization"
+              },
+              {
+                "reference": "urn:uuid:f11535c2-043d-43b6-bf99-b8298ea3c946",
+                "type": "Practitioner"
+              }
+            ]
+          },
+          {
+            "title": "構造情報",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "300",
+                  "display": "構造情報セクション"
+                }
+              ]
+            },
+            "section": [
+              {
+                "title": "紹介目的",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "950",
+                      "display": "紹介目的セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\">診療情報提供のため当院の退院時サマリーを提供します。</div>"
+                }
+              },
+              {
+                "title": "傷病名・主訴",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "340",
+                      "display": "傷病名・主訴セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\">退院時サマリーを参照ください。</div>"
+                }
+              },
+              {
+                "title": "現病歴",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "360",
+                      "display": "現病歴セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\">退院時サマリーを参照ください。</div>"
+                }
+              }
+            ]
+          },
+          {
+            "title": "添付情報",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "210",
+                  "display": "添付情報セクション"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:de92e6c7-94ae-4932-8a51-7f92a013ab69",
+                "type": "Bundle"
+              }
+            ]
+          },
+          {
+            "title": "PDF",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "230",
+                  "display": "PDFセクション"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:1a2b3c4d-5e6f-7a8b-9c0d-abcdef123459",
+                "type": "DocumentReference"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "lastUpdated": "2025-07-28T17:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS|1.12.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID",
+            "value": "SAMPLE-PATIENT-0001"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "サンプル 太郎",
+            "family": "サンプル",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "サンプル タロウ",
+            "family": "サンプル",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-0100-0000"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1975-04-12",
+        "address": [
+          {
+            "text": "東京都サンプル区サンプル1-2-3",
+            "postalCode": "100-0000",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f11535c2-043d-43b6-bf99-b8298ea3c946",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "lastUpdated": "2025-07-28T17:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Practitioner_eCS|1.12.0"
+          ]
+        },
+        "name": [
+          {
+            "text": "デモ 医師"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3e6a0ba2-d781-4fd7-9de6-e077b690daed",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "lastUpdated": "2025-07-28T17:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Practitioner_eCS|1.12.0"
+          ]
+        },
+        "name": [
+          {
+            "text": "デモ 医師"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a44951be-cdaa-4c53-9e35-6be013da5441",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "lastUpdated": "2025-07-28T17:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eCS|1.12.0"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCS/Extension/StructureDefinition/JP_eCS_Department",
+            "valueCodeableConcept": {
+              "text": "内科"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+            "value": "1310000002"
+          }
+        ],
+        "name": "サンプル内科クリニック"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8a888100-0000-4fb7-b5c4-b34afcdea638",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "lastUpdated": "2025-07-28T17:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eCS|1.12.0"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCS/Extension/StructureDefinition/JP_eCS_Department",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment",
+                  "code": "45",
+                  "display": "呼吸器内科"
+                }
+              ],
+              "text": "呼吸器内科"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+            "value": "1310000001"
+          }
+        ],
+        "name": "サンプル総合病院",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-0100-0000"
+          }
+        ],
+        "address": [
+          {
+            "text": "東京都サンプル区病院3-2-1"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1a2b3c4d-5e6f-7a8b-9c0d-abcdef123459",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "meta": {
+          "lastUpdated": "2025-07-28T17:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_DocumentReference_eCS|1.12.0"
+          ]
+        },
+        "status": "current",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "file:///001_RD_PatientReferralDocument.pdf",
+              "title": "診療情報提供書（PDF）"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:de92e6c7-94ae-4932-8a51-7f92a013ab69",
+      "resource": {
+        "resourceType": "Bundle",
+        "meta": {
+          "lastUpdated": "2025-07-27T04:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eDischargeSummary|1.12.0"
+          ]
+        },
+        "identifier": {
+          "system": "http://jpfhir.jp/fhir/clins/bundle-identifier",
+          "value": "1318814790^2025^0123-Discharge-573091824650372918455"
+        },
+        "type": "document",
+        "timestamp": "2025-07-27T04:00:00+09:00",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:830ec2d1-67a7-427e-b6fe-ad0eb29da7fb",
+            "resource": {
+              "resourceType": "Composition",
+              "meta": {
+                "lastUpdated": "2025-07-27T04:00:00+09:00",
+                "profile": [
+                  "http://jpfhir.jp/fhir/eDischargeSummary/StructureDefinition/JP_Composition_eDischargeSummary|1.12.0"
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+                  "valueString": "1.0"
+                }
+              ],
+              "identifier": {
+                "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+                "value": "1318814790^2025^0123-Discharge-573091824650372918455"
+              },
+              "status": "final",
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+                    "code": "18842-5",
+                    "display": "退院時サマリー"
+                  }
+                ]
+              },
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-subtypecodes",
+                      "code": "DISCHARGE",
+                      "display": "退院時文書"
+                    }
+                  ]
+                }
+              ],
+              "subject": {
+                "reference": "urn:uuid:2a0f7b89-9384-4a59-8453-5e8fc889f6d9"
+              },
+              "encounter": {
+                "reference": "urn:uuid:0c9ffdd0-a3a5-4d83-a534-65eb172cb040"
+              },
+              "date": "2025-08-03T08:20:00+09:00",
+              "author": [
+                {
+                  "reference": "urn:uuid:cac9391f-01aa-4f4b-9a89-cdb5b3e57054",
+                  "type": "Practitioner",
+                  "display": "文書作成責任者"
+                },
+                {
+                  "reference": "urn:uuid:51a8a919-f60b-4df0-8921-13b17b2825f0",
+                  "type": "Organization",
+                  "display": "文書作成機関"
+                }
+              ],
+              "title": "退院時サマリー",
+              "custodian": {
+                "reference": "urn:uuid:51a8a919-f60b-4df0-8921-13b17b2825f0",
+                "display": "文書管理責任機関"
+              },
+              "event": [
+                {
+                  "period": {
+                    "start": "2025-07-20",
+                    "end": "2025-08-01"
+                  },
+                  "detail": [
+                    {
+                      "reference": "urn:uuid:0c9ffdd0-a3a5-4d83-a534-65eb172cb040"
+                    }
+                  ]
+                }
+              ],
+              "section": [
+                {
+                  "title": "構造情報",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                        "code": "300",
+                        "display": "構造情報セクション"
+                      }
+                    ]
+                  },
+                  "section": [
+                    {
+                      "title": "入院時詳細",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "322",
+                            "display": "入院時詳細セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>入院時詳細</b></p><p>2025年7月20日に発熱と呼吸苦で救急外来を受診し入院。</p></div>"
+                      },
+                      "entry": [
+                        {
+                          "reference": "urn:uuid:0c9ffdd0-a3a5-4d83-a534-65eb172cb040"
+                        }
+                      ]
+                    },
+                    {
+                      "title": "入院時診断",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "342",
+                            "display": "入院時診断セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>入院時診断</b></p><p>肺炎の疑いで入院。</p></div>"
+                      },
+                      "emptyReason": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                            "code": "unavailable",
+                            "display": "Unavailable"
+                          }
+                        ],
+                        "text": "構造化情報なし"
+                      }
+                    },
+                    {
+                      "title": "主訴",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "352",
+                            "display": "主訴セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>主訴</b></p><ul><li>発熱</li><li>咳嗽</li><li>膿性痰</li><li>呼吸困難</li></ul></div>"
+                      },
+                      "emptyReason": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                            "code": "unavailable",
+                            "display": "Unavailable"
+                          }
+                        ],
+                        "text": "構造化情報なし"
+                      }
+                    },
+                    {
+                      "title": "入院理由",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "312",
+                            "display": "入院理由セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>入院理由</b></p><p>数日前より発熱、咳嗽、膿性痰、呼吸困難が出現し、症状が徐々に増悪した。</p><p>当院救急外来受診時、胸部X線およびCTにて右下葉に浸潤影を認め、血液検査で炎症反応の上昇あり。</p><p>細菌性肺炎の急性増悪と診断し、酸素投与および静脈内抗菌薬投与による加療を目的に入院とした。</p></div>"
+                      },
+                      "entry": [
+                        {
+                          "reference": "urn:uuid:0c9ffdd0-a3a5-4d83-a534-65eb172cb040"
+                        }
+                      ]
+                    },
+                    {
+                      "title": "現病歴",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "360",
+                            "display": "現病歴セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>現病歴</b></p><p>今回、2025年7月20日より発熱（38℃台）、咳嗽、膿性痰および呼吸困難が出現し、徐々に増悪したため、同日当院救急外来を受診。</p><p>胸部X線およびCTにて右下葉に浸潤影を認め、血液検査では炎症反応の上昇を認めた。</p><p>細菌性肺炎の急性増悪と診断し、即日入院の上、広域抗菌薬を開始した。</p><p>治療経過は良好で、解熱・呼吸状態改善を認め、経口摂取も可能となったため、2025年8月1日に退院予定。</p></div>"
+                      },
+                      "emptyReason": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                            "code": "unavailable",
+                            "display": "Unavailable"
+                          }
+                        ],
+                        "text": "構造化情報なし"
+                      }
+                    },
+                    {
+                      "title": "入院中経過",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "333",
+                            "display": "入院中経過セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>入院中経過</b></p><p>2025年7月20日、細菌性肺炎の急性増悪にて入院。入院当日より酸素投与（2L/分、鼻カニューレ）を開始し、広域抗菌薬（セフトリアキソン 2g/日）および喀痰排出促進のための去痰薬投与を行った。</p> <p>7月24日、解熱傾向あり、呼吸困難も軽快。炎症反応（CRP、白血球数）は改善傾向を示した。</p> <p>7月27日、酸素投与を中止し、経口摂取を再開。歩行訓練も併行して実施。</p> <p>7月31日、全身状態安定、呼吸状態も良好となり、退院可能と判断。今後は外来にて経過観察予定。</p></div>"
+                      },
+                      "entry": [
+                        {
+                          "reference": "urn:uuid:b8712f8a-6c67-4d7b-9de1-f39cc2b54b1e"
+                        }
+                      ]
+                    },
+                    {
+                      "title": "退院時詳細",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "324",
+                            "display": "退院時詳細セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>退院時詳細</b></p><p>退院時は自宅療養可能な状態。</p></div>"
+                      },
+                      "entry": [
+                        {
+                          "reference": "urn:uuid:0c9ffdd0-a3a5-4d83-a534-65eb172cb040",
+                          "type": "Encounter"
+                        }
+                      ]
+                    },
+                    {
+                      "title": "退院時診断",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "344",
+                            "display": "退院時診断セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>退院時診断</b></p><ul><li>細菌性肺炎の急性増悪</li></ul></div>"
+                      },
+                      "entry": [
+                        {
+                          "reference": "urn:uuid:4e134de5-9f3e-40b5-a510-2fd7d2354d05",
+                          "type": "Condition"
+                        }
+                      ]
+                    },
+                    {
+                      "title": "退院時投薬指示",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "444",
+                            "display": "退院時投薬指示セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>退院時投薬指示</b></p><ul><li>アモキシシリン・クラブラン酸カリウム配合錠（500mg/125mg）：1回1錠、1日3回、食後、5日間</li><li>アセチルシステイン錠 200mg：1回1錠、1日3回、食後</li><li>サルメテロール・フルチカゾン吸入薬（50μg/250μg）：1回1吸入、1日2回、朝夕</li><li>アムロジピン錠 5mg：1日1回、朝</li><li>アスピリン腸溶錠 100mg：1日1回、朝</li></ul></div>"
+                      },
+                      "emptyReason": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                            "code": "unavailable",
+                            "display": "Unavailable"
+                          }
+                        ],
+                        "text": "構造化情報なし"
+                      }
+                    },
+                    {
+                      "title": "退院時方針指示",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "424",
+                            "display": "退院時方針指示セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>退院時方針指示</b></p><ul><li>1週間後に外来フォローアップ予定。</li></ul></div>"
+                      },
+                      "emptyReason": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                            "code": "unavailable",
+                            "display": "Unavailable"
+                          }
+                        ],
+                        "text": "構造化情報なし"
+                      }
+                    },
+                    {
+                      "title": "既往歴",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "370",
+                            "display": "既往歴セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>既往歴</b></p><ul><li>慢性閉塞性肺疾患(加療継続中)</li><li>高血圧症(降圧薬内服中)</li></ul></div>"
+                      },
+                      "emptyReason": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                            "code": "unavailable",
+                            "display": "Unavailable"
+                          }
+                        ],
+                        "text": "構造化情報なし"
+                      }
+                    },
+                    {
+                      "title": "アレルギー・不耐性反応",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "510",
+                            "display": "アレルギー・不耐性反応セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>アレルギー・不耐性反応</b></p><ul><li>ペニシリン系（発疹）</li></ul></div>"
+                      },
+                      "emptyReason": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                            "code": "unavailable",
+                            "display": "Unavailable"
+                          }
+                        ],
+                        "text": "構造化情報なし"
+                      }
+                    },
+                    {
+                      "title": "家族歴",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "550",
+                            "display": "家族歴セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>家族歴</b></p><ul><li>家族に肺結核や遺伝性呼吸器疾患の既往なし</li></ul></div>"
+                      },
+                      "emptyReason": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                            "code": "unavailable",
+                            "display": "Unavailable"
+                          }
+                        ],
+                        "text": "構造化情報なし"
+                      }
+                    },
+                    {
+                      "title": "入院中検査結果",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "623",
+                            "display": "入院中検査結果セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>入院中検査結果</b></p><p>入院時（7月20日）実施</p><p>[血液検査]</p><ul><li>白血球：12,500 / μL</li><li>CRP：12.3 mg/dL</li><li>プロカルシトニン：1.8 ng/mL</li><li>Hb：13.5 g/dL</li><li>Cre：0.9 mg/dL</li></ul><p>[動脈血ガス分析（酸素 2 L/分投与下）]</p><ul><li>pH：7.43</li><li>PaCO₂：38 mmHg</li><li>PaO₂：78 mmHg</li><li>HCO₃⁻：24 mEq/L</li></ul><p>[胸部X線]</p><ul><li>右下葉に浸潤影を認める</li></ul><p>[胸部CT]</p><ul><li>右下葉背側に区域性の浸潤影、軽度胸水</li></ul><p>[喀痰培養]</p><ul><li>Streptococcus pneumoniae（ペニシリン感受性）検出</li></ul><p>入院経過中（7月25日）</p><p>[血液検査]</p><ul><li>白血球：8,400 / μL</li><li>CRP：5.6 mg/dL（改善傾向）</li></ul><p>[胸部X線]</p><ul><li>右下葉の陰影は縮小</li></ul><p>退院前（7月31日）</p><p>[血液検査]</p><ul><li>白血球：6,900 / μL</li><li>CRP：0.8 mg/dL</li></ul><p>[胸部X線]</p><ul><li>陰影ほぼ消失</li></ul></div>"
+                      },
+                      "emptyReason": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                            "code": "unavailable",
+                            "display": "Unavailable"
+                          }
+                        ],
+                        "text": "構造化情報なし"
+                      }
+                    },
+                    {
+                      "title": "退院時身体所見",
+                      "code": {
+                        "coding": [
+                          {
+                            "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                            "code": "614",
+                            "display": "退院時身体所見セクション"
+                          }
+                        ]
+                      },
+                      "text": {
+                        "status": "additional",
+                        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>退院時身体所見</b></p><p>全身状態所見</p><ul><li>意識清明</li><li>会話可能</li><li>ADL自立</li></ul><p>バイタルサイン</p><ul><li>体温：36.7℃</li><li>血圧：126/78 mmHg</li><li>脈拍：76/分（整）</li><li>呼吸数：16/分</li><li>SpO₂：97%（室内気）</li></ul><p>呼吸器所見</p><ul><li>呼吸音：両側清</li><li>ラ音：なし</li></ul><p>心血管系所見</p><ul><li>心音：整</li><li>雑音：なし</li></ul><p>腹部所見</p><ul><li>平坦・軟</li><li>圧痛なし</li><li>肝脾触知せず</li></ul><p>下肢所見</p><ul><li>浮腫なし</li><li>チアノーゼなし</li></ul></div>"
+                      },
+                      "emptyReason": {
+                        "coding": [
+                          {
+                            "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                            "code": "unavailable",
+                            "display": "Unavailable"
+                          }
+                        ],
+                        "text": "構造化情報なし"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "title": "PDF",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                        "code": "230",
+                        "display": "PDFセクション"
+                      }
+                    ]
+                  },
+                  "entry": [
+                    {
+                      "reference": "urn:uuid:e1b0b554-6dfa-43f1-8eaf-fed49bc9e7c1",
+                      "type": "DocumentReference"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:2a0f7b89-9384-4a59-8453-5e8fc889f6d9",
+            "resource": {
+              "resourceType": "Patient",
+              "meta": {
+                "lastUpdated": "2025-07-27T04:00:00+09:00",
+                "profile": [
+                  "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS|1.12.0"
+                ]
+              },
+              "identifier": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID",
+                  "value": "SAMPLE-PATIENT-0001"
+                }
+              ],
+              "name": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                      "valueCode": "IDE"
+                    }
+                  ],
+                  "use": "official",
+                  "text": "サンプル 太郎",
+                  "family": "サンプル",
+                  "given": [
+                    "太郎"
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                      "valueCode": "SYL"
+                    }
+                  ],
+                  "use": "official",
+                  "text": "サンプル タロウ",
+                  "family": "サンプル",
+                  "given": [
+                    "タロウ"
+                  ]
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1975-04-12",
+              "address": [
+                {
+                  "text": "東京都サンプル区サンプル1-2-3",
+                  "postalCode": "100-0000",
+                  "country": "JP"
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "03-0100-0000"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:0c9ffdd0-a3a5-4d83-a534-65eb172cb040",
+            "resource": {
+              "resourceType": "Encounter",
+              "meta": {
+                "lastUpdated": "2025-07-27T04:00:00+09:00",
+                "profile": [
+                  "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Encounter_eCS|1.12.0"
+                ]
+              },
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "入院"
+              },
+              "period": {
+                "start": "2025-07-20",
+                "end": "2025-08-01"
+              },
+              "subject": {
+                "reference": "urn:uuid:2a0f7b89-9384-4a59-8453-5e8fc889f6d9"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM"
+                        }
+                      ],
+                      "text": "担当医師（主治医）"
+                    }
+                  ],
+                  "individual": {
+                    "reference": "urn:uuid:cac9391f-01aa-4f4b-9a89-cdb5b3e57054"
+                  }
+                }
+              ],
+              "reasonCode": [
+                {
+                  "text": "重症肺炎の診断および治療目的で入院"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "reference": "urn:uuid:4e134de5-9f3e-40b5-a510-2fd7d2354d05"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "DD",
+                        "display": "Discharge diagnosis"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/eCS/CodeSystem/admit-Source",
+                      "code": "1",
+                      "display": "家庭からの入院"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/Common/CodeSystem/discharge-disposition",
+                      "code": "1",
+                      "display": "傷病が治癒・軽快"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:51a8a919-f60b-4df0-8921-13b17b2825f0",
+            "resource": {
+              "resourceType": "Organization",
+              "meta": {
+                "lastUpdated": "2025-07-27T04:00:00+09:00",
+                "profile": [
+                  "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eCS|1.12.0"
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://jpfhir.jp/fhir/eCS/Extension/StructureDefinition/JP_eCS_Department",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment",
+                        "code": "45",
+                        "display": "呼吸器内科"
+                      }
+                    ],
+                    "text": "呼吸器内科"
+                  }
+                }
+              ],
+              "identifier": [
+                {
+                  "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+                  "value": "1310000001"
+                }
+              ],
+              "name": "サンプル総合病院"
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:cac9391f-01aa-4f4b-9a89-cdb5b3e57054",
+            "resource": {
+              "resourceType": "Practitioner",
+              "meta": {
+                "lastUpdated": "2025-07-27T04:00:00+09:00",
+                "profile": [
+                  "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Practitioner_eCS|1.12.0"
+                ]
+              },
+              "name": [
+                {
+                  "text": "デモ 医師"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:4e134de5-9f3e-40b5-a510-2fd7d2354d05",
+            "resource": {
+              "resourceType": "Condition",
+              "meta": {
+                "lastUpdated": "2025-07-27T04:00:00+09:00",
+                "profile": [
+                  "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Condition_eCS|1.12.0"
+                ]
+              },
+              "identifier": [
+                {
+                  "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+                  "value": "4e134de5-9f3e-40b5-a510-2fd7d2354d05"
+                }
+              ],
+              "verificationStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                    "code": "confirmed",
+                    "display": "Confirmed"
+                  }
+                ]
+              },
+              "category": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                      "code": "encounter-diagnosis",
+                      "display": "Encounter Diagnosis"
+                    }
+                  ],
+                  "text": "診察時点での診断名"
+                }
+              ],
+              "code": {
+                "extension": [
+                  {
+                    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePrefixModifier",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "system": "http://medis.or.jp/CodeSystem/master-disease-modKeyNumber",
+                          "code": "27000287",
+                          "display": "細菌性"
+                        }
+                      ],
+                      "text": "細菌性"
+                    }
+                  },
+                  {
+                    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePostfixModifier",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "system": "http://medis.or.jp/CodeSystem/master-disease-modKeyNumber",
+                          "code": "27000018",
+                          "display": "の急性増悪"
+                        }
+                      ],
+                      "text": "の急性増悪"
+                    }
+                  }
+                ],
+                "coding": [
+                  {
+                    "system": "http://medis.or.jp/CodeSystem/master-disease-keyNumber",
+                    "code": "20073542",
+                    "display": "肺炎"
+                  }
+                ],
+                "text": "細菌性肺炎の急性増悪"
+              },
+              "subject": {
+                "reference": "urn:uuid:2a0f7b89-9384-4a59-8453-5e8fc889f6d9"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:b8712f8a-6c67-4d7b-9de1-f39cc2b54b1e",
+            "resource": {
+              "resourceType": "DocumentReference",
+              "meta": {
+                "lastUpdated": "2025-07-27T04:00:00+09:00",
+                "profile": [
+                  "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_DocumentReference_eCS|1.12.0"
+                ]
+              },
+              "status": "current",
+              "type": {
+                "text": "臨床経過",
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "11506-3"
+                  }
+                ]
+              },
+              "description": "抗菌薬投与と酸素療法で症状改善。CRP正常化。",
+              "content": [
+                {
+                  "attachment": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor",
+                        "valueCode": "NI"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:e1b0b554-6dfa-43f1-8eaf-fed49bc9e7c1",
+            "resource": {
+              "resourceType": "DocumentReference",
+              "meta": {
+                "lastUpdated": "2025-07-27T04:00:00+09:00",
+                "profile": [
+                  "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_DocumentReference_eCS|1.12.0"
+                ]
+              },
+              "status": "current",
+              "content": [
+                {
+                  "attachment": {
+                    "contentType": "application/pdf",
+                    "url": "file:///101_DS_DischargeSummary.pdf",
+                    "title": "退院時サマリー（PDF）"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "id": "sample-02-02-eReferral-with-discharge-summary-document"
+}

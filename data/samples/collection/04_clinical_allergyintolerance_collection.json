@@ -1,0 +1,276 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+    "lastUpdated": "2023-11-12T10:00:00+09:00",
+    "profile": [
+      "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_CLINS|1.12.0"
+    ],
+    "tag": [
+      {
+        "system": "http://jpfhir.jp/fhir/clins/CodeSystem/BundleResourceType_CS",
+        "code": "AllergyIntolerance"
+      }
+    ]
+  },
+  "identifier": {
+    "system": "http://jpfhir.jp/fhir/clins/bundle-identifier",
+    "value": "SAMPLE-FHIR-BUNDLE-04"
+  },
+  "type": "collection",
+  "timestamp": "2023-11-12T10:00:00+09:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:b32e07d7-fc36-36b3-b256-4b1e44125098",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "lastUpdated": "2021-01-01T00:00:00Z",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID",
+            "value": "SAMPLE-PATIENT-0001"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">患者情報</div>"
+        },
+        "birthDate": "1975-04-12",
+        "active": true,
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "サンプル 太郎",
+            "family": "サンプル",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "サンプル タロウ",
+            "family": "サンプル",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ],
+        "gender": "male",
+        "address": [
+          {
+            "text": "東京都サンプル区サンプル1-2-3",
+            "postalCode": "100-0000",
+            "country": "JP"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-0100-0000"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:57a79f58-b100-0000-a0d1-221cfd5e5d38",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "meta": {
+          "lastUpdated": "2021-01-01T00:00:00Z",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_AllergyIntolerance_eCS"
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "code": "N"
+            }
+          ],
+          "tag": [
+            {
+              "id": "Condition.tag.id",
+              "system": "http://jpfhir.jp/fhir/clins/CodeSystem/JP_ehrshrs_indication",
+              "code": "LTS",
+              "display": "長期保存"
+            }
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber",
+            "valueIdentifier": {
+              "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+              "value": "1310000001"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "102934701"
+          }
+        ],
+        "category": [
+          "food"
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "id": "AllergyIntolerance.verificationStatus.id",
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "確認済み"
+        },
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS",
+              "code": "J9FC15000000",
+              "display": "こうかく類"
+            }
+          ],
+          "text": "こうかく類"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "口腔内のかゆみ"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">アレルギー情報</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:b32e07d7-fc36-36b3-b256-4b1e44125098"
+        },
+        "recordedDate": "2024-11-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:57a79f58-b100-0000-a0d1-221cfd5e5d39",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "meta": {
+          "lastUpdated": "2021-01-01T00:00:00Z",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_AllergyIntolerance_eCS"
+          ],
+          "security": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+              "code": "N"
+            }
+          ],
+          "tag": [
+            {
+              "id": "Condition.tag.id",
+              "system": "http://jpfhir.jp/fhir/clins/CodeSystem/JP_ehrshrs_indication",
+              "code": "LTS",
+              "display": "長期保存"
+            }
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber",
+            "valueIdentifier": {
+              "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+              "value": "1310000001"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "102934701"
+          }
+        ],
+        "category": [
+          "environment"
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "id": "AllergyIntolerance.verificationStatus.id",
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "確認済み"
+        },
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyNonFoodNonMedicationAllergen_CS",
+              "code": "J9NK13320000",
+              "display": "スギ"
+            }
+          ],
+          "text": "スギ"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "くしゃみ、鼻水、目のかゆみ、のどの違和感"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">アレルギー情報</div>"
+        },
+        "patient": {
+          "reference": "urn:uuid:b32e07d7-fc36-36b3-b256-4b1e44125098"
+        },
+        "recordedDate": "2024-11-01"
+      }
+    }
+  ],
+  "id": "sample-04-04-clinical-allergyintolerance-collection"
+}

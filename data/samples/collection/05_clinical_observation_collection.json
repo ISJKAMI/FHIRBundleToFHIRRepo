@@ -1,0 +1,250 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+    "lastUpdated": "2023-11-12T10:00:00+09:00",
+    "profile": [
+      "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_CLINS|1.12.0"
+    ],
+    "tag": [
+      {
+        "system": "http://jpfhir.jp/fhir/clins/CodeSystem/BundleResourceType_CS",
+        "code": "Observation"
+      }
+    ]
+  },
+  "identifier": {
+    "system": "http://jpfhir.jp/fhir/clins/bundle-identifier",
+    "value": "SAMPLE-FHIR-BUNDLE-05"
+  },
+  "type": "collection",
+  "timestamp": "2023-11-12T10:00:00+09:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:b32e07d7-fc36-36b3-b256-4b1e44125098",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "lastUpdated": "2021-01-01T00:00:00Z",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID",
+            "value": "SAMPLE-PATIENT-0001"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">患者情報</div>"
+        },
+        "birthDate": "1975-04-12",
+        "active": true,
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "サンプル 太郎",
+            "family": "サンプル",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "サンプル タロウ",
+            "family": "サンプル",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ],
+        "gender": "male",
+        "address": [
+          {
+            "text": "東京都サンプル区サンプル1-2-3",
+            "postalCode": "100-0000",
+            "country": "JP"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-0100-0000"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:78869a54-b2bb-3758-8dec-64f469a6c585",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2015-02-07T13:28:17.239+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Observation_LabResult_eCS"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "1318814100-0000767-OBSLAB13883807672021070909210705-2"
+          }
+        ],
+        "contained": [
+          {
+            "resourceType": "Encounter",
+            "id": "Example-JP-Encounter-AMB",
+            "meta": {
+              "profile": [
+                "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Encounter_eCS"
+              ]
+            },
+            "status": "finished",
+            "class": {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "AMB",
+              "display": "ambulatory"
+            }
+          },
+          {
+            "resourceType": "Specimen",
+            "id": "Example-JP-Specimen",
+            "type": {
+              "coding": [
+                {
+                  "display": "検体情報"
+                }
+              ]
+            }
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "Example-Contained-JP-Practitioner-minimun-D002",
+            "meta": {
+              "profile": [
+                "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner"
+              ]
+            },
+            "name": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                    "valueCode": "IDE"
+                  }
+                ],
+                "text": "デモ 医師"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber",
+            "valueIdentifier": {
+              "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+              "value": "1310000001"
+            }
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/eCS/Extension/StructureDefinition/JP_eCS_Department",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment",
+                  "code": "08",
+                  "display": "循環器科"
+                }
+              ],
+              "text": "循環器診療科"
+            }
+          }
+        ],
+        "status": "final",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">身体所見</div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/clins/CodeSystem/JLAC11/JP_CLINS_ObsLabResult_CoreLabo_CS",
+              "code": "C4001133721005385",
+              "display": "FBG"
+            },
+            {
+              "system": "http://jpfhir.jp/fhir/clins/CodeSystem/JP_CLINS_ObsLabResult_LocalCode_CS",
+              "code": "localcode",
+              "display": "localdisplay"
+            }
+          ],
+          "text": "空腹時血糖"
+        },
+        "valueQuantity": {
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL",
+          "value": 129,
+          "unit": "mg/dL"
+        },
+        "referenceRange": [
+          {
+            "id": "Observation.referenceRange.id",
+            "low": {
+              "value": 70,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "high": {
+              "value": 99,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            }
+          }
+        ],
+        "encounter": {
+          "reference": "#Example-JP-Encounter-AMB"
+        },
+        "effectiveDateTime": "2021-07-05T11:19:41+09:00",
+        "performer": [
+          {
+            "reference": "#Example-Contained-JP-Practitioner-minimun-D002"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:b32e07d7-fc36-36b3-b256-4b1e44125098"
+        },
+        "specimen": {
+          "reference": "#Example-JP-Specimen",
+          "type": "Specimen"
+        }
+      }
+    }
+  ],
+  "id": "sample-05-05-clinical-observation-collection"
+}

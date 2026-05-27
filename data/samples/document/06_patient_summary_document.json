@@ -1,0 +1,300 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+    "lastUpdated": "2024-07-07T10:00:00+09:00",
+    "profile": [
+      "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_ePCS|1.12.0"
+    ]
+  },
+  "identifier": {
+    "system": "http://jpfhir.jp/fhir/clins/bundle-identifier",
+    "value": "SAMPLE-FHIR-BUNDLE-06"
+  },
+  "type": "document",
+  "timestamp": "2024-07-07T10:00:00+09:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:830ec2d1-67a7-427e-b6fe-ad0eb29da7fb",
+      "resource": {
+        "resourceType": "Composition",
+        "meta": {
+          "lastUpdated": "2024-07-07T10:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/ePCS/StructureDefinition/JP_Composition_ePCS"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+            "valueString": "1.0"
+          }
+        ],
+        "identifier": {
+          "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+          "value": "1319999100-0000-12345678"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+              "code": "56447-6",
+              "display": "計画書"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-subtypecodes",
+                "code": "DISCHARGE"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd",
+          "type": "Patient",
+          "display": "患者　Patientリソース"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7cad1f19-3435-451d-9a71-a81b61f3358e",
+          "type": "Encounter",
+          "display": "受診　Encounterリソース"
+        },
+        "date": "2024-07-07T12:12:20+09:00",
+        "author": [
+          {
+            "reference": "urn:uuid:22212c2d-4837-fd90-c6c5-6ee2a4b7eed2",
+            "type": "Practitioner",
+            "display": "患者療養計画サマリー作成者　Practitionerリソース"
+          },
+          {
+            "reference": "urn:uuid:ee271941-92f0-07cf-7b6e-db8ce65c9543",
+            "type": "Organization",
+            "display": "患者療養計画サマリー作成機関と診療科　Organizationリソース"
+          }
+        ],
+        "title": "患者サマリー（療養計画書）",
+        "section": [
+          {
+            "title": "計画サマリー",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "422",
+                  "display": "計画サマリーセクション"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:6399da0f-77c7-4eb9-fd93-4559d39f1beb"
+              },
+              {
+                "reference": "urn:uuid:54b73122-69e7-6864-d6b2-eb8dbf372e65"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "lastUpdated": "2025-11-07T17:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID",
+            "value": "SAMPLE-PATIENT-0001"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "サンプル 太郎",
+            "family": "サンプル",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "サンプル タロウ",
+            "family": "サンプル",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1975-04-12",
+        "address": [
+          {
+            "text": "東京都サンプル区サンプル1-2-3",
+            "postalCode": "100-0000",
+            "country": "JP"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-0100-0000"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22212c2d-4837-fd90-c6c5-6ee2a4b7eed2",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "lastUpdated": "2024-07-07T10:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Practitioner_eCS"
+          ]
+        },
+        "name": [
+          {
+            "text": "サンプル 花子"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ee271941-92f0-07cf-7b6e-db8ce65c9543",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "lastUpdated": "2024-07-07T10:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eCS"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+            "value": "1310000002"
+          }
+        ],
+        "name": "サンプル内科クリニック"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7cad1f19-3435-451d-9a71-a81b61f3358e",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "lastUpdated": "2021-11-26T10:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Encounter_eCS"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "外来"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6399da0f-77c7-4eb9-fd93-4559d39f1beb",
+      "resource": {
+        "resourceType": "CarePlan",
+        "meta": {
+          "lastUpdated": "2021-11-26T10:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_CarePlan_ePCS"
+          ]
+        },
+        "status": "active",
+        "intent": "plan",
+        "title": "療養計画",
+        "description": "【目 標】体重：（68kg） BMI：（25） HbA1c：（6.5%）【①達成目標】：患者と相談した目標 3カ月で体重3 kg減とし、ＢＭＩ25、HbA1c 6.5%を目指す。 【②行動目標】：患者と相談した目標 外食時には主食を半量にする。揚げ物を控える。エレベーターを避け、階段を利用。",
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "period": {
+          "start": "2024-07-07"
+        },
+        "created": "2024-07-07"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:54b73122-69e7-6864-d6b2-eb8dbf372e65",
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "lastUpdated": "2023-04-01T10:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Condition_eCS"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "202934701"
+          }
+        ],
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://medis.or.jp/CodeSystem/master-disease-keyNumber",
+              "code": "20050020",
+              "display": "２型糖尿病"
+            }
+          ],
+          "text": "２型糖尿病"
+        },
+        "subject": {
+          "identifier": {
+            "system": "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID",
+            "value": "SAMPLE-PATIENT-0001"
+          }
+        },
+        "onsetDateTime": "2020-04-10"
+      }
+    }
+  ],
+  "id": "sample-06-06-patient-summary-document"
+}

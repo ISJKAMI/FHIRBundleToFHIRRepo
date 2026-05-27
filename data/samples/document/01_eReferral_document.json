@@ -1,0 +1,1857 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+    "lastUpdated": "2025-11-07T11:00:00+09:00",
+    "profile": [
+      "http://jpfhir.jp/fhir/clins/StructureDefinition/JP_Bundle_eReferral|1.12.0"
+    ]
+  },
+  "identifier": {
+    "system": "http://jpfhir.jp/fhir/clins/bundle-identifier",
+    "value": "SAMPLE-FHIR-BUNDLE-01"
+  },
+  "type": "document",
+  "timestamp": "2025-11-07T11:00:00+09:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:830ec2d1-67a7-427e-b6fe-ad0eb29da7fb",
+      "resource": {
+        "resourceType": "Composition",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|1.12.0"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+            "valueString": "1.0"
+          }
+        ],
+        "identifier": {
+          "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+          "value": "1318814790^2025^0123-Referral-4829031765209481635271"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+              "code": "57133-1",
+              "display": "診療情報提供書"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-subtypecodes",
+                "code": "OUTPATIENT",
+                "display": "外来文書"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd",
+          "type": "Patient",
+          "display": "患者情報"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3acc3dc7-c79b-41f1-8eea-ac4de9b664b8",
+          "type": "Encounter",
+          "display": "受診情報"
+        },
+        "date": "2025-11-07T11:00:00+09:00",
+        "author": [
+          {
+            "reference": "urn:uuid:3e6a0ba2-d781-4fd7-9de6-e077b690daed",
+            "type": "Practitioner",
+            "display": "文書作成責任者"
+          },
+          {
+            "reference": "urn:uuid:8a888100-0000-4fb7-b5c4-b34afcdea638",
+            "type": "Organization",
+            "display": "文書作成機関"
+          }
+        ],
+        "title": "診療情報提供書",
+        "custodian": {
+          "reference": "urn:uuid:8a888100-0000-4fb7-b5c4-b34afcdea638",
+          "type": "Organization",
+          "display": "文書管理責任機関"
+        },
+        "event": [
+          {
+            "code": [
+              {
+                "text": "診療情報提供書発行"
+              }
+            ],
+            "period": {
+              "start": "2025-11-07"
+            }
+          }
+        ],
+        "section": [
+          {
+            "title": "紹介元情報",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "920",
+                  "display": "紹介元情報セクション"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:8a888100-0000-4fb7-b5c4-b34afcdea638",
+                "type": "Organization"
+              },
+              {
+                "reference": "urn:uuid:3e6a0ba2-d781-4fd7-9de6-e077b690daed",
+                "type": "Practitioner"
+              }
+            ]
+          },
+          {
+            "title": "紹介先情報",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "910",
+                  "display": "紹介先情報セクション"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:a44951be-cdaa-4c53-9e35-6be013da5441",
+                "type": "Organization"
+              },
+              {
+                "reference": "urn:uuid:f11535c2-043d-43b6-bf99-b8298ea3c946",
+                "type": "Practitioner"
+              }
+            ]
+          },
+          {
+            "title": "構造情報",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "300",
+                  "display": "構造情報セクション"
+                }
+              ]
+            },
+            "section": [
+              {
+                "title": "紹介目的",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "950",
+                      "display": "紹介目的セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>紹介目的</b></p><p>血圧コントロール不良に対して、専門的な高血圧診療および二次性高血圧の鑑別のためご紹介いたします。</p></div>"
+                },
+                "entry": [
+                  {
+                    "reference": "urn:uuid:3acc3dc7-c79b-41f1-8eea-ac4de9b664b8",
+                    "type": "Encounter"
+                  }
+                ]
+              },
+              {
+                "title": "傷病名・主訴",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "340",
+                      "display": "傷病名・主訴セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>傷病名・主訴</b></p><ul><li>高血圧症</li><li>脂質異常症</li></ul></div>"
+                },
+                "entry": [
+                  {
+                    "reference": "urn:uuid:8b4fcd55-6d64-4f89-8e6a-7f8d3e9ad1b2",
+                    "type": "Condition"
+                  },
+                  {
+                    "reference": "urn:uuid:ebc1efe1-7693-4c5b-a1ea-1170e3b4dc68",
+                    "type": "Condition"
+                  }
+                ]
+              },
+              {
+                "title": "現病歴",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "360",
+                      "display": "現病歴セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>現病歴</b></p><p>健康診断で高血圧を指摘され、2024年1月より内服治療を開始。以降も収縮期血圧が150〜160mmHgと高値持続のため、精査目的で貴院紹介。</p></div>"
+                },
+                "entry": [
+                  {
+                    "reference": "urn:uuid:8b4fcd55-6d64-4f89-8e6a-7f8d3e9ad1b2",
+                    "type": "Condition"
+                  }
+                ]
+              },
+              {
+                "title": "既往歴",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "370",
+                      "display": "既往歴セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>既往歴</b></p><ul><li>脂質異常症（2015年～現在）</li><li>胃潰瘍（2018年に治癒）</li></ul></div>"
+                },
+                "entry": [
+                  {
+                    "reference": "urn:uuid:ebc1efe1-7693-4c5b-a1ea-1170e3b4dc68",
+                    "type": "Condition"
+                  },
+                  {
+                    "reference": "urn:uuid:649facff-ed1f-4484-ab1c-5d1c41761417",
+                    "type": "Condition"
+                  }
+                ]
+              },
+              {
+                "title": "投薬指示",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "430",
+                      "display": "投薬指示セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>投薬指示</b></p><ul><li>アムロジピンOD錠5mg「トーワ」　1錠　朝食後</li><li>ロスバスタチン錠2.5mg　1錠　夕食後</li><li>ファモチジン錠10mg　1錠　就寝前（胃潰瘍予防）</li></ul></div>"
+                },
+                "entry": [
+                  {
+                    "reference": "urn:uuid:31b68b2c-f3e9-4e41-93b1-2b02719ef070",
+                    "type": "MedicationRequest"
+                  },
+                  {
+                    "reference": "urn:uuid:c81d66c6-0b3f-450f-be84-2ccdb65c62cb",
+                    "type": "MedicationRequest"
+                  },
+                  {
+                    "reference": "urn:uuid:ebd34948-6bd9-4708-ba8f-a48fc0c45860",
+                    "type": "MedicationRequest"
+                  }
+                ]
+              },
+              {
+                "title": "アレルギー・不耐性反応",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "510",
+                      "display": "アレルギー・不耐性反応セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>アレルギー・不耐性反応</b></p><ul><li>ペニシリン系（発疹）</li></ul></div>"
+                },
+                "emptyReason": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                      "code": "unavailable",
+                      "display": "Unavailable"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "家族歴",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "550",
+                      "display": "家族歴セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>家族歴</b></p><ul><li>母：糖尿病（インスリン治療中）</li></ul></div>"
+                },
+                "emptyReason": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                      "code": "unavailable",
+                      "display": "Unavailable"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "検査結果",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "620",
+                      "display": "検査結果セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>検査結果</b></p><p>[バイタルサイン]</p><p>2025年7月15日実施</p><ul><li>血圧：154/92 mmHg</li></ul><p>[検体検査]</p><p>2025年7月15日実施</p><ul><li>HbA1c：5.6 %</li><li>LDL-C：142 mg/dL</li><li>HDL-C：48 mg/dL</li><li>AST：22 IU/L</li><li>ALT：24 IU/L</li><li>eGFR：78 mL/min/1.73m²</li></ul></div>"
+                },
+                "entry": [
+                  {
+                    "reference": "urn:uuid:d7caa8b2-3d47-46b2-94f8-c6b1e0c44e21",
+                    "type": "Observation"
+                  },
+                  {
+                    "reference": "urn:uuid:8dcb1c2a-7b20-44c6-9f36-0ad1f485bb21",
+                    "type": "Observation"
+                  },
+                  {
+                    "reference": "urn:uuid:b3a1d0c7-9fd5-4c76-9e6e-59c2f82c9a11",
+                    "type": "Observation"
+                  },
+                  {
+                    "reference": "urn:uuid:a7c8d5f1-9c32-4c15-b76b-7f0f438a2e77",
+                    "type": "Observation"
+                  },
+                  {
+                    "reference": "urn:uuid:eb5afce2-3d66-4f39-a0ae-2431188f1675",
+                    "type": "Observation"
+                  },
+                  {
+                    "reference": "urn:uuid:cd8bfec9-dc0a-4f92-bc7f-7cb2df5d9f42",
+                    "type": "Observation"
+                  },
+                  {
+                    "reference": "urn:uuid:7f3b2c5e-1a84-4c9e-9f23-8b9de4c72f51",
+                    "type": "Observation"
+                  }
+                ]
+              },
+              {
+                "title": "感染症情報",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "520",
+                      "display": "感染症情報セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>感染症情報</b></p><ul><li>特になし。</li></ul></div>"
+                },
+                "emptyReason": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                      "code": "unavailable",
+                      "display": "Unavailable"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "社会歴・生活習慣",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "640",
+                      "display": "社会歴・生活習慣セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>社会歴・生活習慣</b></p><ul><li>職業：事務職</li></ul></div>"
+                },
+                "entry": [
+                  {
+                    "reference": "urn:uuid:b8c5f3e4-1f92-48b7-a0e5-4fb6c729f1d4",
+                    "type": "Observation"
+                  }
+                ]
+              },
+              {
+                "title": "身体所見",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "610",
+                      "display": "身体所見セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>身体所見</b></p><ul><li>心電図：洞調律、左室肥大の疑いあり。</li><li>胸部X線：心胸比53%、肺野異常なし。</li></ul></div>"
+                },
+                "entry": [
+                  {
+                    "reference": "urn:uuid:7b5c6d40-90e3-44c4-9f5c-70bbce6020b8",
+                    "type": "Observation"
+                  },
+                  {
+                    "reference": "urn:uuid:d8a9a3cb-5f12-41f0-9f24-dca19a13c6a1",
+                    "type": "Observation"
+                  }
+                ]
+              },
+              {
+                "title": "臨床経過",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                      "code": "330",
+                      "display": "臨床経過セクション"
+                    }
+                  ]
+                },
+                "text": {
+                  "status": "additional",
+                  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>臨床経過</b></p><p>2024年1月よりアムロジピン5mg開始。</p><p>2024年6月よりロスバスタチン2.5mg併用。</p><p>生活指導（減塩・禁煙・減量）継続中。</p><p>降圧効果不十分のため、追加治療や精査を検討中。</p></div>"
+                },
+                "emptyReason": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                      "code": "unavailable",
+                      "display": "Unavailable"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "title": "添付情報",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "210",
+                  "display": "添付情報セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "additional",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>添付情報</b></p><ul><li>生理検査レポートを添付します。</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:1a2b3c4d-5e6f-7a8b-9c0d-abcdef123456",
+                "type": "DocumentReference"
+              }
+            ]
+          },
+          {
+            "title": "備考・連絡情報",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "220",
+                  "display": "備考・連絡情報セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "additional",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p><b>備考・連絡情報</b></p><ul><li>食塩摂取は7g/日以下を指導中。</li><li>日常生活は自立、就労継続中。</li></ul></div>"
+            }
+          },
+          {
+            "title": "PDF",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/clins/CodeSystem/document-section",
+                  "code": "230",
+                  "display": "PDFセクション"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:1a2b3c4d-5e6f-7a8b-9c0d-abcdef123459",
+                "type": "DocumentReference"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Patient_eCS|1.12.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID",
+            "value": "SAMPLE-PATIENT-0001"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "サンプル 太郎",
+            "family": "サンプル",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "サンプル タロウ",
+            "family": "サンプル",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-0100-0000"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1975-04-12",
+        "address": [
+          {
+            "text": "東京都サンプル区サンプル1-2-3",
+            "postalCode": "100-0000",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3e6a0ba2-d781-4fd7-9de6-e077b690daed",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Practitioner_eCS|1.12.0"
+          ]
+        },
+        "name": [
+          {
+            "text": "デモ 医師"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f11535c2-043d-43b6-bf99-b8298ea3c946",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Practitioner_eCS|1.12.0"
+          ]
+        },
+        "name": [
+          {
+            "text": "サンプル 花子"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8a888100-0000-4fb7-b5c4-b34afcdea638",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eCS|1.12.0"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCS/Extension/StructureDefinition/JP_eCS_Department",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment",
+                  "code": "01",
+                  "display": "内科"
+                }
+              ],
+              "text": "内科"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+            "value": "1310000001"
+          }
+        ],
+        "name": "サンプル内科クリニック",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-0100-0000"
+          }
+        ],
+        "address": [
+          {
+            "text": "東京都サンプル区医療機関4-5-6"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a44951be-cdaa-4c53-9e35-6be013da5441",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Organization_eCS|1.12.0"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCS/Extension/StructureDefinition/JP_eCS_Department",
+            "valueCodeableConcept": {
+              "text": "循環器内科"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+            "value": "1310000002"
+          }
+        ],
+        "name": "サンプル総合病院"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3acc3dc7-c79b-41f1-8eea-ac4de9b664b8",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Encounter_eCS|1.12.0"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "外来"
+        },
+        "reasonCode": [
+          {
+            "text": "血圧コントロール不良に対して、専門的な高血圧診療および二次性高血圧の鑑別のためご紹介いたします。"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8b4fcd55-6d64-4f89-8e6a-7f8d3e9ad1b2",
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Condition_eCS|1.12.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "8b4fcd55-6d64-4f89-8e6a-7f8d3e9ad1b2"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://medis.or.jp/CodeSystem/master-disease-keyNumber",
+              "code": "20061593",
+              "display": "高血圧症"
+            }
+          ],
+          "text": "高血圧症"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ebc1efe1-7693-4c5b-a1ea-1170e3b4dc68",
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Condition_eCS|1.12.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "ebc1efe1-7693-4c5b-a1ea-1170e3b4dc68"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://medis.or.jp/CodeSystem/master-disease-keyNumber",
+              "code": "20091221",
+              "display": "脂質異常症"
+            }
+          ],
+          "text": "脂質異常症"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:649facff-ed1f-4484-ab1c-5d1c41761417",
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Condition_eCS|1.12.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "649facff-ed1f-4484-ab1c-5d1c41761417"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved",
+              "display": "Resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://medis.or.jp/CodeSystem/master-disease-keyNumber",
+              "code": "20054276",
+              "display": "胃潰瘍"
+            }
+          ],
+          "text": "胃潰瘍"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d7caa8b2-3d47-46b2-94f8-c6b1e0c44e21",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "血圧"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "effectiveDateTime": "2025-11-03T08:15:00+09:00",
+        "valueString": "154/92 mmHg",
+        "component": [
+          {
+            "code": {
+              "text": "収縮期血圧"
+            },
+            "valueQuantity": {
+              "value": 154,
+              "unit": "mmHg"
+            }
+          },
+          {
+            "code": {
+              "text": "拡張期血圧"
+            },
+            "valueQuantity": {
+              "value": 92,
+              "unit": "mmHg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7b5c6d40-90e3-44c4-9f5c-70bbce6020b8",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "procedure",
+                "display": "Procedure"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "心電図所見"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "effectiveDateTime": "2025-11-03T08:15:00+09:00",
+        "valueString": "洞調律、左室肥大の疑いあり"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d8a9a3cb-5f12-41f0-9f24-dca19a13c6a1",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "imaging",
+                "display": "Imaging"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "胸部X線"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "effectiveDateTime": "2025-11-03T08:15:00+09:00",
+        "valueString": "胸部X線：心胸比53%、肺野異常なし"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b8c5f3e4-1f92-48b7-a0e5-4fb6c729f1d4",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "職業"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "effectiveDateTime": "2025-11-03T08:15:00+09:00",
+        "valueString": "事務職"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8dcb1c2a-7b20-44c6-9f36-0ad1f485bb21",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Observation_LabResult_eCS|1.12.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "8dcb1c2a-7b20-44c6-9f36-0ad1f485bb21"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/clins/CodeSystem/JLAC10/JP_CLINS_ObsLabResult_CoreLabo_CS",
+              "code": "3D046000001899902",
+              "display": "HbA1c-NGSP"
+            }
+          ],
+          "text": "HbA1c"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "effectiveDateTime": "2025-11-03T08:15:00+09:00",
+        "valueQuantity": {
+          "value": 5.6,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "specimen": {
+          "reference": "urn:uuid:5f1b8e47-9e7f-4dc7-9b74-7a41e4f6b6de"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.6,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+            },
+            "high": {
+              "value": 6.2,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b3a1d0c7-9fd5-4c76-9e6e-59c2f82c9a11",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "b3a1d0c7-9fd5-4c76-9e6e-59c2f82c9a11",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Observation_LabResult_eCS|1.12.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "b3a1d0c7-9fd5-4c76-9e6e-59c2f82c9a11"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/clins/CodeSystem/JLAC10/JP_CLINS_ObsLabResult_CoreLabo_CS",
+              "code": "3F077000002399901",
+              "display": "LDL-C"
+            }
+          ],
+          "text": "LDL-C"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "effectiveDateTime": "2025-11-03T08:20:00+09:00",
+        "valueQuantity": {
+          "value": 142,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "specimen": {
+          "reference": "urn:uuid:5f1b8e47-9e7f-4dc7-9b74-7a41e4f6b6de"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 65,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "high": {
+              "value": 139,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a7c8d5f1-9c32-4c15-b76b-7f0f438a2e77",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Observation_LabResult_eCS|1.12.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "a7c8d5f1-9c32-4c15-b76b-7f0f438a2e77"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/clins/CodeSystem/JLAC10/JP_CLINS_ObsLabResult_CoreLabo_CS",
+              "code": "3F070000002327201",
+              "display": "HDL-C"
+            }
+          ],
+          "text": "HDL-C"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "effectiveDateTime": "2025-11-03T08:20:00+09:00",
+        "valueQuantity": {
+          "value": 48,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "specimen": {
+          "reference": "urn:uuid:5f1b8e47-9e7f-4dc7-9b74-7a41e4f6b6de"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 40,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "high": {
+              "value": 80,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eb5afce2-3d66-4f39-a0ae-2431188f1675",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Observation_LabResult_eCS|1.12.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "eb5afce2-3d66-4f39-a0ae-2431188f1675"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/clins/CodeSystem/JLAC10/JP_CLINS_ObsLabResult_CoreLabo_CS",
+              "code": "3B035000002327201",
+              "display": "AST"
+            }
+          ],
+          "text": "AST"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "effectiveDateTime": "2025-11-03T08:20:00+09:00",
+        "valueQuantity": {
+          "value": 22,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "specimen": {
+          "reference": "urn:uuid:5f1b8e47-9e7f-4dc7-9b74-7a41e4f6b6de"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 13,
+              "unit": "U/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "U/L"
+            },
+            "high": {
+              "value": 30,
+              "unit": "U/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "U/L"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cd8bfec9-dc0a-4f92-bc7f-7cb2df5d9f42",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Observation_LabResult_eCS|1.12.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "cd8bfec9-dc0a-4f92-bc7f-7cb2df5d9f42"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/clins/CodeSystem/JLAC10/JP_CLINS_ObsLabResult_CoreLabo_CS",
+              "code": "3B045000002327201",
+              "display": "ALT"
+            }
+          ],
+          "text": "ALT"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "effectiveDateTime": "2025-11-03T08:20:00+09:00",
+        "valueQuantity": {
+          "value": 24,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "specimen": {
+          "reference": "urn:uuid:5f1b8e47-9e7f-4dc7-9b74-7a41e4f6b6de"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 7,
+              "unit": "U/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "U/L"
+            },
+            "high": {
+              "value": 40,
+              "unit": "U/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "U/L"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7f3b2c5e-1a84-4c9e-9f23-8b9de4c72f51",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Observation_LabResult_eCS|1.12.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "7f3b2c5e-1a84-4c9e-9f23-8b9de4c72f51"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/clins/CodeSystem/JP_CLINS_ObsLabResult_Uncoded_CS",
+              "code": "99999999999999999",
+              "display": "未標準化コード項目(JLAC)"
+            }
+          ],
+          "text": "eGFR"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "effectiveDateTime": "2025-11-03T08:20:00+09:00",
+        "valueQuantity": {
+          "value": 78,
+          "unit": "mL/min/1.73m²"
+        },
+        "specimen": {
+          "reference": "urn:uuid:5f1b8e47-9e7f-4dc7-9b74-7a41e4f6b6de"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 60,
+              "unit": "mL/min/1.73m²"
+            },
+            "high": {
+              "value": 120,
+              "unit": "mL/min/1.73m²"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5f1b8e47-9e7f-4dc7-9b74-7a41e4f6b6de",
+      "resource": {
+        "resourceType": "Specimen",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen"
+          ]
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSampleMaterialCodeJLAC10_CS",
+              "code": "023",
+              "display": "血清"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:31b68b2c-f3e9-4e41-93b1-2b02719ef070",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_MedicationRequest_eCS|1.12.0"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Encounter",
+            "id": "encounter-contained-001",
+            "meta": {
+              "profile": [
+                "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Encounter_eCS"
+              ]
+            },
+            "status": "finished",
+            "class": {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "AMB",
+              "display": "外来"
+            }
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber",
+            "valueIdentifier": {
+              "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+              "value": "1310000001"
+            }
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/eCS/Extension/StructureDefinition/JP_eCS_Department",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment",
+                  "code": "01",
+                  "display": "内科"
+                }
+              ],
+              "text": "内科"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber",
+            "value": "1"
+          },
+          {
+            "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex",
+            "value": "1"
+          },
+          {
+            "id": "requestIdentifier",
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "31b68b2c-f3e9-4e41-93b1-2b02719ef070"
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://capstandard.jp/iyaku.info/CodeSystem/YJ-code",
+              "code": "2171022F4036",
+              "display": "アムロジピンＯＤ錠５ｍｇ「トーワ」"
+            }
+          ],
+          "text": "アムロジピンOD錠5mg「トーワ」"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "encounter": {
+          "reference": "#encounter-contained-001"
+        },
+        "authoredOn": "2025-11-07",
+        "dosageInstruction": [
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse",
+                "valuePeriod": {
+                  "start": "2025-11-07"
+                }
+              }
+            ],
+            "text": "アムロジピンOD錠5mg「トーワ」　1錠　朝食後",
+            "timing": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUsage_ePrescription",
+                    "code": "1011000400000000",
+                    "display": "１日１回朝食後　服用"
+                  }
+                ],
+                "text": "1錠 朝食後"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c81d66c6-0b3f-450f-be84-2ccdb65c62cb",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_MedicationRequest_eCS|1.12.0"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Encounter",
+            "id": "encounter-contained-002",
+            "meta": {
+              "profile": [
+                "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Encounter_eCS"
+              ]
+            },
+            "status": "finished",
+            "class": {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "AMB",
+              "display": "外来"
+            }
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber",
+            "valueIdentifier": {
+              "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+              "value": "1310000001"
+            }
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/eCS/Extension/StructureDefinition/JP_eCS_Department",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment",
+                  "code": "01",
+                  "display": "内科"
+                }
+              ],
+              "text": "内科"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber",
+            "value": "2"
+          },
+          {
+            "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex",
+            "value": "1"
+          },
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "c81d66c6-0b3f-450f-be84-2ccdb65c62cb"
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://capstandard.jp/iyaku.info/CodeSystem/YJ-code",
+              "code": "2189017F1154",
+              "display": "ロスバスタチン錠２．５ｍｇ「サワイ」"
+            }
+          ],
+          "text": "ロスバスタチン錠2.5mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "encounter": {
+          "reference": "#encounter-contained-002"
+        },
+        "authoredOn": "2025-11-07",
+        "dosageInstruction": [
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse",
+                "valuePeriod": {
+                  "start": "2025-11-07"
+                }
+              }
+            ],
+            "text": "ロスバスタチン錠2.5mg　1錠　夕食後",
+            "timing": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUsage_ePrescription",
+                    "code": "1011040000000000",
+                    "display": "１日１回夕食後　服用"
+                  }
+                ],
+                "text": "1錠 夕食後"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ebd34948-6bd9-4708-ba8f-a48fc0c45860",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_MedicationRequest_eCS|1.12.0"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Encounter",
+            "id": "encounter-contained-003",
+            "meta": {
+              "profile": [
+                "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_Encounter_eCS"
+              ]
+            },
+            "status": "finished",
+            "class": {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "AMB",
+              "display": "外来"
+            }
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/clins/Extension/StructureDefinition/JP_eCS_InstitutionNumber",
+            "valueIdentifier": {
+              "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+              "value": "1310000001"
+            }
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/eCS/Extension/StructureDefinition/JP_eCS_Department",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment",
+                  "code": "01",
+                  "display": "内科"
+                }
+              ],
+              "text": "内科"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber",
+            "value": "3"
+          },
+          {
+            "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex",
+            "value": "1"
+          },
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "ebd34948-6bd9-4708-ba8f-a48fc0c45860"
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://capstandard.jp/iyaku.info/CodeSystem/YJ-code",
+              "code": "2325003F1300",
+              "display": "ファモチジン錠１０ｍｇ「トーワ」"
+            }
+          ],
+          "text": "ファモチジン錠10mg"
+        },
+        "subject": {
+          "reference": "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+        },
+        "encounter": {
+          "reference": "#encounter-contained-003"
+        },
+        "authoredOn": "2025-11-07",
+        "dosageInstruction": [
+          {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse",
+                "valuePeriod": {
+                  "start": "2025-11-07"
+                }
+              }
+            ],
+            "text": "ファモチジン錠10mg　1錠　就寝前（胃潰瘍予防）",
+            "timing": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://jpfhir.jp/fhir/clins/CodeSystem/JP_CLINS_MedicationUsage_Uncoded_CS",
+                    "code": "0X0XXXXXXXXX0000",
+                    "display": "ダミー用法コード"
+                  }
+                ],
+                "text": "1錠　就寝前（胃潰瘍予防）"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1a2b3c4d-5e6f-7a8b-9c0d-abcdef123456",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_DocumentReference_eCS|1.12.0"
+          ]
+        },
+        "status": "current",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "file:///001_RD_seiri-report.pdf",
+              "title": "生理検査レポート"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1a2b3c4d-5e6f-7a8b-9c0d-abcdef123459",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "meta": {
+          "lastUpdated": "2025-11-07T11:00:00+09:00",
+          "profile": [
+            "http://jpfhir.jp/fhir/eCS/StructureDefinition/JP_DocumentReference_eCS|1.12.0"
+          ]
+        },
+        "status": "current",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "file:///002_RD_PatientReferralDocument.pdf",
+              "title": "診療情報提供書（PDF）"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "id": "sample-01-01-eReferral-document"
+}
